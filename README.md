@@ -1,5 +1,5 @@
 # todolist
-To do list  for Frontend Course
+To do list using Javascript , Mockup Api , html & SCSS for Frontend Course
 
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
