@@ -1,3 +1,9 @@
+input[type="radio"] {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
 input:focus, input:hover, input:active,
 textarea:focus,
 textarea:hover,
@@ -10,11 +16,20 @@ select:active {
 
 button {
   border: none;
-  border-radius: 3px;
+  border-radius: px;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-size: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+button.button-add {
+  background-color: #f3f6f9;
+  color: #283848;
+  border: 2px solid #7fb6776f;
+}
+
+button.button-add:hover {
+  background-color: rgba(127, 182, 119, 0.437);
 }
 
 button.btn {
@@ -27,29 +42,38 @@ button.btn:hover {
 }
 
 button.btn-action {
-  background-color: transparent;
+  background-color: #f3f6f9;
   width: min-content;
   text-align: center;
   align-items: center;
   margin: auto;
   color: #283848;
-  border: 2px solid #abcea1;
+  border: 2px solid #7fb6776f;
   border-radius: 20%;
-  top: 1rem;
 }
 
 button.btn-action:hover {
-  background-color: rgba(127, 182, 119, 0.437);
+  background-color: #7fb6776f;
 }
 
-button.btn-delete {
+.btn-delete {
   background-color: #f3f6f9;
-  border: 2px solid #ff5e00;
+  border: 2px solid red;
   color: #ff5e00;
 }
 
-button.btn-delete:hover {
+.btn-delete:hover {
   background-color: #ffd5bd;
+}
+
+.btn-edit {
+  background-color: #f3f6f9;
+  border: 2px solid rgba(86, 148, 189, 0.462);
+  color: rgba(86, 148, 189, 0.462);
+}
+
+.btn-edit:hover {
+  background-color: rgba(86, 148, 189, 0.462);
 }
 
 .modal-background {
@@ -102,9 +126,9 @@ body {
 
 .app {
   background-color: #fff;
-  width: 300px;
-  height: 500px;
-  border: 5px solid #abcea1;
+  width: 400px;
+  height: 600px;
+  border: 3px solid #abcea1;
   border-radius: 8px;
   padding: 15px;
   overflow-y: scroll;
@@ -124,25 +148,20 @@ body {
   cursor: pointer;
 }
 
-.fa-plus {
-  background-color: #abcea1;
-  padding: 3px;
-  border-radius: 3px;
-}
-
-#tasks {
+.tasks {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
 }
 
-#tasks div {
+.taskslist {
   border: 3px solid #abcea1;
   background-color: #e2eede;
   border-radius: 6px;
   padding: 5px;
   display: grid;
   gap: 4px;
+  margin-bottom: 10px;
 }
 
 .options {
@@ -157,4 +176,17 @@ body {
 
 #msg {
   color: red;
+}
+
+.headertasklist {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priority {
+  color: #ff02026d;
+}
+
+.taskdate {
+  color: #283848, 30%;
 }

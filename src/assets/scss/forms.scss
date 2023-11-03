@@ -30,11 +30,16 @@
 //   flex-direction: column;
 // }
 
+input[type="radio"] {
+  
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
 
 input,
 textarea,
 select {
-
   &:focus, &:hover, &:active {
     border: 1px solid $outline-border;
   }
@@ -47,11 +52,6 @@ select {
 //   min-width: 200px;
 // }
 
-// input[type="date"] {
-//   width: 150px;
-//   display: flex;
-//   flex-direction: row;
-// }
 
 // select {
 //   flex-grow: 1;
@@ -61,11 +61,23 @@ select {
 
 button {
   border: none;
-  border-radius: 3px;
+  border-radius: px;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-size: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1rem;
+
+  &.button-add {
+    background-color: $background-color;
+    color: $font-color;
+    
+    border: 2px solid #7fb6776f;
+    
+  }
+
+  &.button-add:hover {
+    background-color: rgba(127, 182, 119, 0.437);
+
+  }
 
   &.btn {
     background-color: $background-color;
@@ -77,39 +89,47 @@ button {
   }
 
   &.btn-action {
-    background-color: transparent;
+    background-color: #f3f6f9;
     width:min-content;
     text-align: center;
     align-items: center;
     margin: auto;
     color: $font-color;
-    border: 2px solid #abcea1;
+    
+    border: 2px solid #7fb6776f;
     border-radius: 20%;
-    top: 1rem;
+    
   }
 
   &.btn-action:hover {
-    background-color: rgba(127, 182, 119, 0.437);
+    background-color: #7fb6776f;
   }
 
-//   &.btn-submit {
-//     background-color: $color-secondary;
-//     color: $font-color-light;
-//   }
+  // &.btn-submit {
+  //   background-color: $color-secondary;
+  //   color: $font-color-light;
+  // }
 
-//   &.btn-submit:hover {
-//     background-color: darken($color-secondary, 10%);
-//   }
-
-  &.btn-delete {
-    background-color: $background-color;
-    border: 2px solid $color-warning;
-    color: $color-warning;
-  }
-
-  &.btn-delete:hover {
-    background-color: lighten($color-warning, 37%);
-  }
-
-// }
+  // &.btn-submit:hover {
+  //   background-color: darken($color-secondary, 10%);
+  // }
 }
+.btn-delete {
+  background-color: $background-color;
+  border: 2px solid red;
+  color: $color-warning;
+}
+
+.btn-delete:hover {
+  background-color: lighten($color-warning, 37%);
+}
+.btn-edit {
+  background-color: $background-color;
+  border: 2px solid $color-secondary;
+  color: $color-secondary;
+}
+
+.btn-edit:hover {
+  background-color: $color-secondary;
+}
+
