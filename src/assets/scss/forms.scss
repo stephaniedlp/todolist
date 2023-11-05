@@ -46,18 +46,6 @@ select {
 }
 
 
-// input[type="text"],
-// input[type="number"] {
-//   flex-grow: 1;
-//   min-width: 200px;
-// }
-
-
-// select {
-//   flex-grow: 1;
-//   min-width: 200px;
-// }
-
 
 button {
   border: none;
@@ -118,6 +106,7 @@ button {
   background-color: $background-color;
   border: 2px solid red;
   color: $color-warning;
+
 }
 
 .btn-delete:hover {

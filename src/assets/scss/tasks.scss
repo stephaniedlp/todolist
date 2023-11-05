@@ -2,21 +2,27 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
+
 }
 .taskslist {
   border: 3px solid #abcea1;
-  background-color: #e2eede;
+  background-color: $background-task;
   border-radius: 6px;
   padding: 5px;
   display: grid;
-  gap: 4px;
+  gap: 3px;
   margin-bottom: 10px;
+  padding-right: 0.5rem;
+  overflow-wrap: anywhere;
+  
 }
 
 .options {
-  justify-self: center;
+  justify-content: space-between;
   display: flex;
+  flex-direction: row;
   gap: 20px;
+
 }
 
 .options i {
@@ -32,6 +38,7 @@
 }
 .priority{
   color: #ff02026d;
+  
 }
 .taskdate{
   color:($font-color,30%) ;

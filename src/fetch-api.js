@@ -1,5 +1,5 @@
  
-const apiURL = 'https://65417bc2f0b8287df1fe66f9.mockapi.io/'; // Replace with your API URL
+const apiURL = 'https://65417bc2f0b8287df1fe66f9.mockapi.io'; // Replace with your API URL
 
 function fetchAPI(url, method = 'GET', data = null) {
 

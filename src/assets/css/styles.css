@@ -132,17 +132,30 @@ body {
   border-radius: 8px;
   padding: 15px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .app::-webkit-scrollbar {
-  width: 0 !important;
+  width: 12px;
+}
+
+.app::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+  box-shadow: inset 0 0 6px #abcea1;
+}
+
+.app::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #363636;
 }
 
 #addNew {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(171, 206, 161, 0.35);
+  background-color: #cdd6ca53;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -156,17 +169,20 @@ body {
 
 .taskslist {
   border: 3px solid #abcea1;
-  background-color: #e2eede;
+  background-color: #cdd6ca53;
   border-radius: 6px;
   padding: 5px;
   display: grid;
-  gap: 4px;
+  gap: 3px;
   margin-bottom: 10px;
+  padding-right: 0.5rem;
+  overflow-wrap: anywhere;
 }
 
 .options {
-  justify-self: center;
+  justify-content: space-between;
   display: flex;
+  flex-direction: row;
   gap: 20px;
 }
 
