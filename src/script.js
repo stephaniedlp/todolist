@@ -116,7 +116,7 @@ const displayTasks = (data) => {
   });
   
   initDeleteButtonHandler();
-  // initEditButtonHandler();
+  initEditButtonHandler();
 };
 
 // Initialize the task list
@@ -156,14 +156,14 @@ function initDeleteButtonHandler() {
   });
 }
 function editTask(taskId) {
- 
+ debugger
     const title = taskData.title;
   const dueDate = taskData.dueDate;
   const description = taskData.description;
   const priority = taskData.priority;
   const label = taskData.label;
     // Add any other fields you want to edit
-    document.getElementById("editTitle").value = title;
+    document.getSelection.value = title;
     document.getElementById("editDueDate").value = dueDate;
     document.getElementById("editDescription").value = description;
     document.getElementById("editPriority").value = priority;
@@ -214,8 +214,8 @@ document.querySelectorAll(".btn-edit").forEach((button) => {
   button.addEventListener("click", () => {
     const listaId = button.getAttribute("data-edit-id");
     // Find the corresponding task data using `listaId` and call `populateEditModal` with that data
-    const task = findTaskById(listaId); // Implement the `findTaskById` function to fetch the task from your data source
-    populateEditModal(task);
+    const task = populateEditModal(listaId); // Implement the `findTaskById` function to fetch the task from your data source
+    editTask(task);
   });
 });
 }
